@@ -36,14 +36,15 @@ class App {
                     break;
                 }
             }
-            if (numbers[i] < max)max = numbers[i];
-            if (numbers[i] > min)min = numbers[i];
+            if (numbers[i] > max)max = numbers[i];
+            if (numbers[i] < min)min = numbers[i];
             sum += numbers[i];
             System.out.printf("%4d",numbers[i]);
         }
         System.out.println();
-        System.out.println("Среднее арифмитическое без учёта минимального " + min + " и максимального" + max);
-        System.out.printf((double)(sum-min-max)/(numbers.length - 2));
+        System.out.println("Среднее арифмитическое без учёта минимального " + min + " и максимального " + max);
+        System.out.printf("%3.2f ", (double)(sum-min-max)/(numbers.length - 2));
+        System.out.println();
         System.out.println("---End Array---");
     }
 }
